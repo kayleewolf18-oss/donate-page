@@ -10,35 +10,36 @@
       background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
     .container {
       max-width: 600px;
-      margin: 50px auto;
+      margin: 100px auto;
       background-color: #fff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
     }
-    h1 {
-      color: #0072CE;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    .double--donation-form-widget {
-      margin-top: 20px;
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #0072CE;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Support The Shul</h1>
-    <p>Your donation helps sustain our community and programs. Enter any amount below to contribute.</p>
+    <p>Your donation helps sustain our community and programs.</p>
 
-    <!-- Double Giving Inline Donation Form -->
-    <div class="double--donation-form-widget" campaign="general-donations"></div>
+    <!-- Donate Now Button -->
+    <button onclick="Double.openCheckout({campaign: 'general-donations'});">
+      Donate Now
+    </button>
 
     <!-- Double Giving Script -->
     <script src="https://cdn.doublegiving.com/double.js"></script>
